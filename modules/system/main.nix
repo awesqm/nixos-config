@@ -3,6 +3,8 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./boot.nix
+      ./pkgs.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
