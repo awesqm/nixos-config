@@ -15,8 +15,8 @@
         system = "x86_64-linux";
         modules = [
           # ./configuration.nix
-          ./system/main.nix
-          ./gui/main.nix
+          ./modules/system/main.nix
+          ./modules/gui/main.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
