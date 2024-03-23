@@ -2,7 +2,6 @@
 {
   imports = [
     ./pkgs.nix
-    ./user.nix
   ];
 
   security.rtkit.enable = true;
