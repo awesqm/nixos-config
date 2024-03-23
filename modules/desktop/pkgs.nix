@@ -23,6 +23,7 @@
     keepassxc
     #nextcloud-client
     obsidian
+    vscodium-fhs
     inter
 
     vesktop
