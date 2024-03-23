@@ -16,7 +16,7 @@
         modules = [
           # ./configuration.nix
           ./modules/system/main.nix
-          ./modules/gui/main.nix
+          ./modules/desktop/main.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
