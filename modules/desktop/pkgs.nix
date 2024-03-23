@@ -12,6 +12,7 @@
     grim
     slurp
     wl-clipboard-rs
+    wl-clip-persist
     libnotify
     greetd.tuigreet
     brightnessctl
