@@ -16,6 +16,13 @@
 
   nixpkgs.config.allowUnfree = true;
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 10;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
+  nix.settings.auto-optimise-store = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.kernelModules = [ "amdgpu" ];
@@ -98,12 +105,12 @@
     obsidian
     bitwarden-desktop
     alacritty
-    waybar
     tofi
     vesktop
     telegram-desktop
     inter
     tela-icon-theme
+    gnome.adwaita-icon-theme
     vscodium-fhs
     llvmPackages.libcxxClang
     clang-tools
@@ -122,6 +129,7 @@
 
   # List services that you want to enable:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.WLR_DRM_NO_ATOMIC = "1";
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
