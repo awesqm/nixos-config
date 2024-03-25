@@ -6,7 +6,7 @@
     hypridle
     hyprlock
     alacritty
-    dunst
+    mako
     tofi
 
     grim
